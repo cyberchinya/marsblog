@@ -20,11 +20,11 @@
     </div>
     <footer class="bg-gray-800 text-white p-6 mt-auto">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {{ date('Y') }} Laravel Blog. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} Все права защищены.</p>
             <div class="flex space-x-4 mt-4 md:mt-0">
                 <a href="#" class="hover:text-gray-400">Privacy Policy</a>
                 <a href="#" class="hover:text-gray-400">Terms of Service</a>
-                <a href="#" class="hover:text-gray-400">Contact</a>
+                <a href="#" class="hover:text-gray-400">Контакты</a>
             </div>
         </div>
     </footer>
