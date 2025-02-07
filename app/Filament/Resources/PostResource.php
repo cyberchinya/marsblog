@@ -23,15 +23,16 @@ use Filament\Tables\Columns\ImageColumn;
 class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';    
+   // protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';  
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';  
     public static function form(Form $form): Form
-    {
+ {
         return $form
             ->schema([
-                TextInput::make('title')->required(),
-                RichEditor::make('content')->required(),                 
+                TextInput::make('title')->label('Заголовок'),
+                RichEditor::make('content')->label('Описание')->required(),                 
                 // FileUpload::make('image')->directory('posts')->image(),
-                FileUpload::make('image')->directory('posts')->disk('public')->image(),
+                FileUpload::make('image')->label('Изображение')->directory('posts')->disk('public')->image(),
             ]);
     }
 
