@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define('access-filament', function ($user) {
-            return $user->hasRole('admin'); // Проверяем, есть ли у пользователя роль "admin"
+            return $user->hasRole('admin'); // Проверяем, есть ли у пользователя роль "admin"            
         });
     }
 }

@@ -22,6 +22,7 @@ use Filament\Tables\Columns\ImageColumn;
 
 class PostResource extends Resource
 {
+    protected static ?string $pluralModelLabel = 'Посты';
     protected static ?string $model = Post::class;
    // protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';  
     protected static ?string $navigationIcon = 'heroicon-o-document-text';  
@@ -41,7 +42,7 @@ class PostResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title')->sortable(),
-                ImageColumn::make('image')->disk('public'),
+                ImageColumn::make('image')->square()->size(80)->disk('public'),
                 TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('title')
                 ->searchable(),
