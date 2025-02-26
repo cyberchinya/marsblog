@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container mx-auto flex flex-col md:flex-row">
     <!-- Левая колонка с баннерами -->
     <aside class="w-full md:w-1/4 p-4 hidden md:block">

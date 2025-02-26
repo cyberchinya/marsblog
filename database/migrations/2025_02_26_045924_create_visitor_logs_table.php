@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('visitor_logs', function (Blueprint $table) {
             $table->id();
             $table->string('ip_address');
+            $table->date('visited_at');
             $table->string('user_agent')->nullable();
             $table->string('url');
             $table->timestamps();
