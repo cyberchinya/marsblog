@@ -31,9 +31,11 @@ class PostResource extends Resource
         return $form
             ->schema([
                 TextInput::make('title')->label('Заголовок'),
-                RichEditor::make('content')->label('Описание')->required(),                 
-                // FileUpload::make('image')->directory('posts')->image(),
-                FileUpload::make('image')->label('Изображение')->directory('posts')->disk('public')->image(),
+                RichEditor::make('content')->label('Описание')->required()
+                ->fileAttachmentsDirectory('uploads')->fileAttachmentsVisibility('public/uploads')
+                ->fileAttachmentsVisibility('public'),               
+               // FileUpload::make('image')->directory('posts')->image(),
+                FileUpload::make('image')->label('Изображение')->directory('public/posts')->disk('public')->image(),
             ]);
     }
 
