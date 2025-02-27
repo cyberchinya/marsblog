@@ -7,8 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-</head>
+
+ </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+    
     <!-- Навигация --> 
   <nav class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 md:p-6 shadow-md"> 
         <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 flex flex-col min-h-screen">
@@ -28,8 +30,9 @@
     <!-- Основное содержимое -->
     <div class="container mx-auto p-4 md:p-6 flex-1">
  
-
+        
         @yield('content')
+        
     </div>
 
     <!-- Футер -->
@@ -43,7 +46,7 @@
             </div>
         </div>
     </footer>
-
+ 
     <div x-data="{ showBanner: localStorage.getItem('cookieConsent') !== 'true' }" 
     x-show="showBanner"
     class="fixed bottom-4 left-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row justify-between items-center">
@@ -52,6 +55,6 @@
         class="mt-2 md:mt-0 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
         Принять
     </button>
-</div>   
+</div> 
 </body>
 </html>

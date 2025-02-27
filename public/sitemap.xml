@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url>
+        <loc>http://localhost</loc>
+    
+            </url>
+    <url>
+        <loc>http://localhost/about</loc>
+    
+            </url>
+    <url>
+        <loc>http://localhost/post/2</loc>
+        <lastmod>2025-02-26T10:04:46+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/post/4</loc>
+        <lastmod>2025-02-06T17:37:16+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/post/5</loc>
+        <lastmod>2025-02-06T20:38:52+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/post/6</loc>
+        <lastmod>2025-02-07T08:00:17+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/post/8</loc>
+        <lastmod>2025-02-26T09:12:42+00:00</lastmod>
+
+            </url>
+</urlset>

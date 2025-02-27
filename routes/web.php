@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Http\Middleware\TrackVisitor;
 use App\Models\Banner;
+use Illuminate\Support\Facades\Response;
 
 
 Route::get('/', function () {
@@ -29,4 +30,8 @@ Route::get('/', function () {
     $bannersRight = Banner::where('position', 'right')->get();
     return view('welcome', compact('posts', 'bannersLeft', 'bannersRight'));
     
+});
+
+Route::get('/sitemap.xml', function () {
+    return Response::file(public_path('sitemap.xml'), ['Content-Type' => 'application/xml']);
 });
