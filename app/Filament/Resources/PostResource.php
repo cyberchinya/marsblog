@@ -15,8 +15,6 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\FileUpload;
-
-
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
 
@@ -33,7 +31,10 @@ class PostResource extends Resource
                 TextInput::make('title')->label('Заголовок'),
                 RichEditor::make('content')->label('Описание')->required()
                 ->fileAttachmentsDirectory('uploads')->fileAttachmentsVisibility('public/uploads')
-                ->fileAttachmentsVisibility('public'),               
+                ->fileAttachmentsVisibility('public'),
+                FileUpload::make('image')->image()->directory('posts/images'),
+                FileUpload::make('audio')->label('аудио')->directory('posts/audio')->acceptedFileTypes(['audio/*']),
+                FileUpload::make('video')->label('видео')->directory('posts/videos')->acceptedFileTypes(['video/*']),
                // FileUpload::make('image')->directory('posts')->image(),
                 FileUpload::make('image')->label('Изображение')->directory('public/posts')->disk('public')->image(),
             ]);
