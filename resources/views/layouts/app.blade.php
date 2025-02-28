@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный блог</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>   
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/threeAnimation.js'])
  </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
     <!-- Навигация --> 
   <nav class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 md:p-6 shadow-md"> 
-        <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 flex flex-col min-h-screen">
+        
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-xl md:text-2xl font-bold">
                 <a href="/" class="hover:text-gray-200 transition duration-300">Личный блог</a>
@@ -49,5 +49,6 @@
         Принять
     </button>
 </div> 
+
 </body>
 </html>
