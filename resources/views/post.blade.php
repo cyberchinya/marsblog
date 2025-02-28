@@ -4,7 +4,7 @@
 <div class="container mx-auto px-4 lg:px-16 py-8">
 
     <!-- Заголовок статьи -->
-    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight text-center">
+    <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight text-center">
         {{ $post->title }}
     </h1>
 
