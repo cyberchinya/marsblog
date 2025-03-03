@@ -5,6 +5,7 @@ use App\Models\Post;
 use App\Http\Middleware\TrackVisitor;
 use App\Models\Banner;
 use Illuminate\Support\Facades\Response;
+use App\Http\Controllers\TrafficAnalyticsController;
 
 
 Route::get('/', function () {
@@ -35,3 +36,6 @@ Route::get('/', function () {
 Route::get('/sitemap.xml', function () {
     return Response::file(public_path('sitemap.xml'), ['Content-Type' => 'application/xml']);
 });
+
+Route::get('/analytics/traffic', [TrafficAnalyticsController::class, 'index'])->name('analytics.traffic');
+Route::get('/analytics/traffic/chart-data', [TrafficAnalyticsController::class, 'chartData'])->name('analytics.traffic.chart-data');
