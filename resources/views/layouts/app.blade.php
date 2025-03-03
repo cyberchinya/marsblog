@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный блог</title>
+    {{-- <title>Личный блог</title> --}}
      {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+     <title>@yield('title', 'Личный блог')</title>    
+     <meta name="description" content="@yield('meta_description', 'Добро пожаловать в мой блог!')">
+     <meta name="keywords" content="@yield('meta_keywords', 'блог, Laravel, PHP, программирование')">
+     <meta name="author" content="CyberChinya">
+
     
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>   
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/threeAnimation.js'])
