@@ -30,7 +30,7 @@ Route::get('/', function () {
     $bannersLeft = Banner::where('position', 'left')->get();
     $bannersRight = Banner::where('position', 'right')->get();
     return view('welcome', compact('posts', 'bannersLeft', 'bannersRight'));
-    
+
 });
 
 Route::get('/sitemap.xml', function () {
@@ -39,3 +39,5 @@ Route::get('/sitemap.xml', function () {
 
 Route::get('/analytics/traffic', [TrafficAnalyticsController::class, 'index'])->name('analytics.traffic');
 Route::get('/analytics/traffic/chart-data', [TrafficAnalyticsController::class, 'chartData'])->name('analytics.traffic.chart-data');
+
+Route::view('/privacy-policy', 'privacy-policy')->name('privacy.policy');

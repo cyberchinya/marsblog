@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{-- <title>Личный блог</title> --}}
-     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
-     <title>@yield('title', 'Личный блог')</title>    
-     <meta name="description" content="@yield('meta_description', 'Добро пожаловать в мой блог!')">
-     <meta name="keywords" content="@yield('meta_keywords', 'блог, Laravel, PHP, программирование')">
-     <meta name="author" content="CyberChinya">
 
+    <title>@yield('title', 'Личный блог')</title>
+    <meta name="description" content="@yield('meta_description', 'Добро пожаловать в мой блог!')">
+    <meta name="keywords" content="@yield('meta_keywords', 'блог, Laravel, PHP, программирование')">
+    <meta name="author" content="CyberChinya">
+
+    <link rel="icon" href="{{ asset('favicon.ico') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>   
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/threeAnimation.js'])
- </head>
+</head>
+
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
-    <!-- Навигация --> 
-  <nav class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 md:p-6 shadow-md"> 
-        
+
+    <!-- Навигация -->
+    <nav class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 md:p-6 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-xl md:text-2xl font-bold">
                 <a href="/" class="hover:text-gray-200 transition duration-300">Личный блог</a>
@@ -27,33 +29,24 @@
                     Админ
                 </a>
             @endcan
-
         </div>
     </nav>
+
     <!-- Основное содержимое -->
-    <div class="container mx-auto p-4 md:p-6 flex-1">        
-        @yield('content')        
-    </div>
+    <main class="container mx-auto p-4 md:p-6 flex-1">
+        @yield('content')
+    </main>
+
     <!-- Футер -->
     <footer class="bg-gray-800 text-white p-4 md:p-6 mt-auto">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <p class="text-center md:text-left">&copy; {{ date('Y') }} Все права защищены.</p>
             <div class="flex space-x-4 mt-2 md:mt-0">
-                {{-- <a href="#" class="hover:text-gray-400 transition duration-300">Политика конфиденциальности</a> --}}
-                {{-- <a href="#" class="hover:text-gray-400 transition duration-300">Условия использования</a> --}}
                 <a href="#" class="hover:text-gray-400 transition duration-300">Контакты</a>
             </div>
         </div>
-    </footer> 
-    <div x-data="{ showBanner: localStorage.getItem('cookieConsent') !== 'true' }" 
-    x-show="showBanner"
-    class="fixed bottom-4 left-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row justify-between items-center">
-    <p class="text-sm">Мы используем файлы cookie для улучшения работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с нашей <a href="#" class="underline">политикой использования cookie</a>.</p>
-    <button @click="localStorage.setItem('cookieConsent', 'true'); showBanner = false"
-        class="mt-2 md:mt-0 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
-        Принять
-    </button>
-</div> 
-
+    </footer>
+    <!-- Баннер согласия на cookie -->
+<x-cookie-consent-banner />
 </body>
 </html>
